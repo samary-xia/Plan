@@ -1,0 +1,20 @@
+{
+    "name": "samary/plan",
+    "description": "加购未支付邮件",
+    "authors": [
+        {
+            "name": "samary",
+            "email": "samary.xia@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Samary\\Plan\\": ""
+        }
+    },
+    "require": {}
+}

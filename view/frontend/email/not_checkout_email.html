@@ -1,0 +1,70 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject {{trans "Your items are waiting for your payment"}} @-->
+<!--@vars {
+"var data.comment":"Comment",
+"var data.email":"Sender Email",
+"var data.name":"Sender Name",
+"var data.telephone":"Sender Telephone"
+} @-->
+
+
+{{template config_path="design/email/header_template"}}
+<div style="width: 600px; margin-left: auto; margin-right: auto; height: auto; box-sizing: border-box;">
+    <div style="width: 600px;background: #fff; margin:0;">
+        <h3 style="font-size:26px; font-weight: normal; color:#000; margin:30px 0 10px; text-align: center;">DON’T LET YOUR NEW HAIR LOOKS SELL OUT</h3>
+        <h3 style="text-align: center; width: 600px ;margin:20px 0!important; color:#ec8994;font-size:20px; "><b>$5</b> EXCLUSIVE COUPON: <b style="color: #f46118;text-decoration: underline;">VIP-KRYH1</b></h3>
+        <p>	<a style="display:block; font-size:17px;color:#fff;margin:30px auto 0; width:340px; text-align: center; height: 56px;line-height: 56px;text-align: center;background: #333;color: #fff;" title="DMDlink 1" href="{{config path="web/secure/base_url"}}checkout/cart/" target="_blank">VIEW CART & CHECKOUT</a></p>
+        <p style="width: 540px;
+    margin: 0 auto !important;
+    text-align: left;
+    line-height: 26px;
+    font-size: 14px;
+    color: #333;
+    padding: 20px!important;
+    background: #d7e9e9;">
+
+            Hi beautiful,<br>
+            It looks like you recently added an item to your cart, but haven't completed the order. <br>
+            We're here if you have any questions! And we believe our hair will inspire a better you.<br>
+
+        </p>
+    </div>
+    {{layout handle="email_product_list" items=$data store_url=$store_url area="frontend"}}
+    <div style="font-family: Arial; width:600px; ; text-align: center; padding: 20px 0; clear: both; line-height: 2em; font-size: 0.8em; background: #fff;color: #000;">
+
+        <table style="width: 600px; border-bottom: 1px dashed #ddd; margin-bottom: 20px;">
+            <tr><td colspan="3" style="background:#000; color:#fff;padding: 8px 0; font-size: 16px;">Have Questions? Contact Us</td></tr>
+            <tr>
+                <td style="width:290px;text-align: center;">
+                    <div style="width:290px;text-align: center;">
+                        <h3>HOW TO REACH US</h3>
+                        <p><img src="{{config path="web/secure/base_url"}}media/wysiwyg/tel.png" width="25" style="vertical-align: middle; margin-right: 8px;">{{var store_phone }}</p>
+                        <p><img src="{{config path="web/secure/base_url"}}media/wysiwyg/emai.png" width="25" style=" vertical-align: middle; margin-right: 8px;">{{var store_email }}</p>
+                    </div>
+                </td>
+                <td style="width: 10px; border-left:1px dashed #ddd;"></td>
+                <td style="width:290px;text-align: center;">
+                    <div style="width:290px;text-align: center;">
+                        <h3>LEARN ABOUT OUR</h3>
+                        <p><a href="#">RETURN POLICY</a></p>
+                        <p><img src="{{config path="web/secure/base_url"}}media/wysiwyg/tiz.png" width="30px"></p>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+        <p style="font-size: 16px;">THANK YOU FOR SHOPPING AT WWW.Samary.COM</p>
+    </div>
+</div>
+
+<style>
+    .header{
+        text-align: center; width: 600px; margin: 20px 0;
+    }
+</style>

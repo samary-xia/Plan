@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="not_checkout_email_template" label="Not Checkout Email" file="not_checkout_email.html"
+              type="html" module="Samary_Plan" area="frontend"/>
+</config>

@@ -1,0 +1,17 @@
+<table style="width:540px; border-bottom: 1px dashed #ddd; margin:0 auto 20px;">
+    <?php foreach($block->getItems() as $item):?>
+    <tr>
+        <td style="border-bottom: 1px solid #ddd;">
+            <a href="<?= $block->getStoreUrl()?><?= $item->getUrl()?>.html">
+                <img src="<?= $block->getStoreUrl()?>media/catalog/product<?= $item->getImage()?>" width="100">
+            </a>
+        </td>
+        <td style="text-align: left;border-bottom: 1px solid #ddd;">
+            <h3 style="font-size: 13px;height:40px; line-height: 20px;overflow: hidden;">
+                <a href="<?= $block->getStoreUrl()?><?= $item->getUrl()?>.html"><?= $item->getName()?></a>
+            </h3>
+            <div>QTY:<b><?= $item->getQty()?></b>-----Total:<b>$<?= $item->getBaseRowTotal()?></b></div>
+        </td>
+    </tr>
+    <?php endforeach;?>
+</table>
